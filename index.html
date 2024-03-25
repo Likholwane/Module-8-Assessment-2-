@@ -48,35 +48,33 @@
 			var currentOperator;
 			
 			//Event handler for when any digit button is pressed
-			function digitBtnPressed(button){
-							if(newLine)
-				{
-					document.getElementById("inpuBox").value = button;
-					newLine = "False";
-					
-				} else {
-					function digitbtnPressed(button){
-				var currentValue = document.getElementById("inputBox").value;
-document.getElementById("inputBox").value = button;
+		    function digitBtnPressed(button){
+			    
+			 if(newLine){
+			   document.getElementById("inpuBox").value = button;
+			   newLine = "False";	
+			   } else {
+			  var currentValue = document.getElementById("inputBox").value;
+                          document.getElementById("inputBox").value = currentValue + button;
 				}
 			}
 		
-				//Event handler for when the AC button is pressed
-				function btnACPressed(){
-					document.getElementById("inputBox").value = 0;
-					newLine = true;
+			//Event handler for when the AC button is pressed
+			function btnACPressed(){
+			       document.getElementById("inputBox").value = 0;
+				newLine = true;
 				}
 				
-				//Event handler for operator buttons
+				//Event handler for operator to buttons
 				function operatorBtnPressed(operator){
 					currentOperator = operator;
 					value1 = parseInt(document.getElementById("InputBox").value);
-					newLine = "true";
+					newLine = true;
 				}
 				
 				//Event handler for equals to button
 				function equalsBtnPressed(){
-					var value = parseInt(document.getElementById("inputBox").value);
+					var value2 = parseInt(document.getElementById("inputBox").value);
 					var finalTotal;
 					
 					switch(currentOperator){
@@ -99,7 +97,7 @@ document.getElementById("inputBox").value = button;
 					document.getElementById("inputBox").value = finalTotal;
 					
 					value: 0;
-					newLine;"true";
+					newLine= true;
 				}
 				
 				
