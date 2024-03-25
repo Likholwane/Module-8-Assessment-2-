@@ -14,21 +14,21 @@
 		<td class="digitButton" onclick="digitBtnPressed(7)">7</td>
 		<td class="digitButton"onclick="digitBtnPressed(8)">8</td>
 		<td class="digitButton"onclick="digitBtnPressed(9)">9</td>
-		<td class="digitButton" onclick="digitBtnPressed('x')">x</td>
+		<td class="operatorButton" onclick="operatorBtnPressed('x')">x</td>
 	</tr>
 		
 	<tr>
 		<td class="digitButton"onclick="digitBtnPressed(4)">4</td>
 		<td class="digitButton"onclick="digitBtnPressed(5)">5</td>
 		<td  class="digitButton"onclick="digitBtnPressed(6)">6</td>
-		<td class="digitButton" onclick="digitBtnPressed(-)">-</td>
+		<td class="operatorButton" onclick="operatorBtnPressed('-')">-</td>
 	</tr>
 		
 	<tr>
 		<td class="digitButton" onclick="digitBtnPressed(1)">1</td>
 		<td  class="digitButton"onclick="digitBtnPressed(2)">2</td>
 		<td class="digitButton" onclick="digitBtnPressed(3)">3</td>
-		<td  class="digitButton"onclick="operatorBtnPressed(operator)('+')">+</td>
+		<td  class="operatorButton"onclick="operatorBtnPressed(operator)('+')">+</td>
 	</tr>
 		<tr>
 		<td class="digitButton"colspan="2" onclick="digitBtnPressed(0)">0</td>
@@ -38,7 +38,7 @@
 		</tr>
 		
 		<tr>
-		<td class="operatorButton" colspan="4" onclick="equalsBtnPressed(=)">=</td>
+		<td class="operatorButton" colspan="4" onclick="equalsBtnPressed()">=</td>
 		</tr>
 		</table>
 		
@@ -91,7 +91,7 @@
 							break;
 							
 							case"x":
-							finalTotal = value1 x value2;
+							finalTotal = value1 * value2;
 							break;
 					}
 					document.getElementById("inputBox").value = finalTotal;
